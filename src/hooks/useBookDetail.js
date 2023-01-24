@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react';
 import { getBookById } from '../services/books';
 
 export function useBookDetail({ id }) {
-  const [book, setBook] = useState();
+  const [book, setBook] = useState({});
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
+  console.log('USEBOOKDETAIL.js id', id);
 
   useEffect(() => {
     const fetchData = async () => {
